@@ -47,7 +47,7 @@ const About = ({ theme }) => {
           <h1
             className={`text-xl font-extrabold ${
               isDark ? "text-darkNav" : "text-light"
-            } px-2`}
+            } px-2 mt-2`}
           >
             Education
           </h1>

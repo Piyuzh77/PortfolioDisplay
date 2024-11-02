@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { CodeXml, Home, PanelTopClose, PhoneCall, User } from "lucide-react";
 import Skills from "./Components/Skills";
 import Project from "./Components/Project";
-import nerdmo from "./assets/nerdmoSS.png";
+import nerdmo from "./assets/NerdmoSS.png";
 import pwb from "./assets/pwb.png";
 import javaApp from "./assets/javaApp.png";
 import About from "./Components/About";

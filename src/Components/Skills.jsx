@@ -19,7 +19,7 @@ function Skills({ theme, skills }) {
         </h1>
         {skills.map((item, index) => {
           return (
-            <div key={index} className="p-1 m-auto ">
+            <div key={index} className="p-1 m-auto flex ">
               <Card theme={theme} items={item} />
             </div>
           );

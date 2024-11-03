@@ -9,11 +9,11 @@ function Navbar({ navVal, theme, toggleTheme, onScroll }) {
   }, [theme]);
 
   return (
-    <nav className="hover:ring-2 border border-lightBlue active:ring-1 fixed bottom-10 left-1/2 transform -translate-x-1/2 rounded-full min-w-max bg-darkNav dark:bg-[#b9f6d2] dark:border-black drop-shadow-2xl flex items-center gap-2 px-2 py-2 hover:drop-shadow-lg z-[9999] mx-5 sm:px-2">
-      <ul className="flex justify-between">
-        <div className="flex">
+    <nav className="hover:ring-2 border border-lightBlue active:ring-1 fixed bottom-10 left-1/2 transform -translate-x-1/2 rounded-full w-11/12 sm:w-auto bg-darkNav dark:bg-[#b9f6d2] dark:border-black drop-shadow-2xl flex items-center gap-2 px-2 py-2 hover:drop-shadow-lg z-[9999]">
+      <ul className="flex justify-between w-full">
+        <div className="flex items-center w-full justify-center sm:justify-start">
           {navVal.map((item, index) => (
-            <li key={index} className="px-4">
+            <li key={index} className="px-2">
               <button
                 onClick={() => onScroll(item.name)}
                 className={`hidden sm:block font-bold px-1 py-1 rounded-full transition-transform transform hover:-translate-y-2 hover:shadow-lg ${
@@ -23,7 +23,7 @@ function Navbar({ navVal, theme, toggleTheme, onScroll }) {
                 {item.name}
               </button>
               <button
-                onClick={() => onScroll(item.name)} 
+                onClick={() => onScroll(item.name)}
                 aria-label={item.name}
                 className="block sm:hidden font-bold px-1 py-1 rounded-full transition-transform transform hover:-translate-y-2 hover:shadow-lg"
               >
@@ -31,7 +31,7 @@ function Navbar({ navVal, theme, toggleTheme, onScroll }) {
               </button>
             </li>
           ))}
-          <div className="mx-1 h-6 w-px dark:bg-[#0a0b07]/80 bg-white m-auto"></div>
+          <div className="mx-1 h-6 w-px dark:bg-[#0a0b07]/80 bg-white"></div>
           <div className="flex p-1 rounded-full transition-transform transform hover:-translate-y-2 hover:shadow-lg hover:drop-shadow-lg">
             <a
               className="flex"
@@ -41,7 +41,7 @@ function Navbar({ navVal, theme, toggleTheme, onScroll }) {
             >
               <img
                 src={theme === "dark" ? github : githubLight}
-                className="h-6 w-6 m-auto"
+                className="h-6 w-6"
                 alt="GitHub"
               />
             </a>

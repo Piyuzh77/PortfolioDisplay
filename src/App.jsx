@@ -122,7 +122,7 @@ function App() {
       title: "Folder-Deletor",
       src: javaApp,
       description:
-        "A standalone command-line interface (CLI) tool written in JavaScript for deleting empty folders from the root directory. It features robust exception handling and employs multiple threads for depth-first search (DFS) traversal!",
+        "A standalone command-line interface (CLI) tool written in Java for deleting empty folders from the root directory. It features robust exception handling and employs multiple threads for depth-first search (DFS) traversal!",
       tech: ["Java", "NIO APi (Java-8)", "Windows-Task Schedular"],
       githubLink: "https://github.com/Piyuzh77/Automated-Empty-Folder-Deleter",
     },

@@ -12,75 +12,55 @@ function Header({ theme }) {
   const iconColor = theme === "dark" ? "text-white" : "text-black";
 
   return (
-    <div className="max-w-[99vw] mx-auto px-4 flex">
+    <div className="max-w-full mx-auto px-2">
       <div
-        className={`w-full flex flex-col justify-center ${
+        className={`w-full flex flex-col items-center ${
           theme === "dark" ? `bg-darkNav` : `bg-[#b9f6d2]`
         }`}
       >
-        <div className="flex p-6 justify-center items-center w-full">
-          {theme === "dark" ? (
-            <div className="flex px-3 items-center">
-              <img src={logodark} className="w-8 h-8 rounded-full" alt="Logo" />
-              <span className="pl-4 text-lg font-sans font-extrabold text-[#b9f6d2] leading-tight sm:block">
-                Piyush Gupta
-              </span>
-            </div>
-          ) : (
-            <div className="flex px-3 items-center">
-              <img src={logo} className="w-8 h-8 rounded-full" alt="Logo" />
-              <span className="pl-4 text-lg font-sans text-darkNav font-extrabold leading-tight sm:block">
-                Piyush Gupta
-              </span>
-            </div>
-          )}
+        <div className="flex flex-col sm:flex-row items-center sm:p-6 p-2 w-full">
+          {/* Logo and Name */}
+          <div className="flex items-center px-2">
+            <img
+              src={theme === "dark" ? logodark : logo}
+              className="w-6 h-6 sm:w-8 sm:h-8 rounded-full"
+              alt="Logo"
+            />
+            <span
+              className={`pl-2 text-base sm:text-lg font-sans font-extrabold leading-tight ${
+                theme === "dark" ? "text-[#b9f6d2]" : "text-darkNav"
+              }`}
+            >
+              Piyush Gupta
+            </span>
+          </div>
 
           {/* Social Media Icons */}
-          <div className="flex ml-auto gap-3">
-            <button
-              className={`p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ${iconColor}`}
-            >
-              <a
-                href="mailto:piyushg0707.03@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MailIcon />
-              </a>
-            </button>
-            <button
-              className={`p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ${iconColor}`}
-            >
+          <div className="flex mt-3 sm:mt-0 sm:ml-auto gap-2">
             <a
-                href="https://www.linkedin.com/in/piyush-gupta-298464212/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              <LinkedinIcon />
-              </a>
-            </button>
-            <button
-              className={`p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ${iconColor}`}
+              href="mailto:piyushg0707.03@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`p-1 sm:p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ${iconColor}`}
             >
+              <MailIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+            </a>
             <a
-                href="https://x.com/PiyushOnTwT"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              <TwitterIcon />
-              </a>
-            </button>
-            <button
-              className={`p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ${iconColor}`}
+              href="https://www.linkedin.com/in/piyush-gupta-298464212/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`p-1 sm:p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ${iconColor}`}
             >
+              <LinkedinIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+            </a>
             <a
-                href="https://www.instagram.com/piyush0719/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              <InstagramIcon />
-              </a>
-            </button>
+              href="https://x.com/PiyushOnTwT"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`p-1 sm:p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ${iconColor}`}
+            >
+              <TwitterIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+            </a>
           </div>
         </div>
       </div>

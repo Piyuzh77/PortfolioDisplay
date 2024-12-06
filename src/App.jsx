@@ -7,7 +7,7 @@ import { CodeXml, Home, PanelTopClose, PhoneCall, User } from "lucide-react";
 import Skills from "./Components/Skills";
 import Project from "./Components/Project";
 import nerdmo from "./assets/NerdmoSS.png";
-import pwb from "./assets/pwb.png";
+import pwb from "./assets/pwb.jpg";
 import javaApp from "./assets/javaApp.png";
 import About from "./Components/About";
 
@@ -109,22 +109,24 @@ function App() {
       githubLink: "https://github.com/Piyuzh77/NerdMo",
     },
     {
-      name: "Portfolio Website",
-      title: "Devfolio",
+      name: "DSA Problems Website",
+      title: "Prep Extra",
       src: pwb,
       tech: ["ReactJs", "TailwindCss", "Vitejs"],
       description:
-        "A personal portfolio website showcasing projects, skills, and experience with a sleek, responsive design.",
-      githubLink: "https://github.com/Piyuzh77",
+        "A website to help students prepare for technical interviews, offering company-wise sorted LeetCode problems along with curated resources. The platform not only focuses on Data Structures and Algorithms (DSA) but also provides materials to strengthen overall technical knowledge. With features like search functionality and pagination, it ensures easy navigation and efficient learning.",
+      githubLink: "https://github.com/Piyuzh77/prepextra",
+      
+      siteLink:"https://prepextra.netlify.app/"
     },
     {
-      name: "Automated Folder Deletor",
-      title: "Folder-Deletor",
+      name: "Iterative File traversal for finding CSV and converting it into JSON",
+      title: "CSV->JSON script ",
       src: javaApp,
       description:
-        "A standalone command-line interface (CLI) tool written in Java for deleting empty folders from the root directory. It features robust exception handling and employs multiple threads for depth-first search (DFS) traversal!",
-      tech: ["Java", "NIO APi (Java-8)", "Windows-Task Schedular"],
-      githubLink: "https://github.com/Piyuzh77/Automated-Empty-Folder-Deleter",
+        "Developed a script that efficiently traverses directories to locate CSV files, convert them into JSON format, and extract relevant details from file names for further processing. Utilizing OpenCSV and Jackson libraries, the script ensures accurate data parsing and seamless JSON serialization. It streamlines data handling by automating complex tasks, making it a versatile solution for organizing and transforming structured data.",
+      tech: ["Java", "NIO APi (Java-8)", "Jackson", "Open CV"],
+      githubLink: "https://github.com/Piyuzh77/Leetcode-companyWise-json/tree/master/csvToJson",
     },
   ];
 

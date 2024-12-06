@@ -24,27 +24,41 @@ const Projects = ({ project, theme }) => {
               <div
                 key={i}
                 className={`${
-                  isDark
-                    ? "bg-lightBlue text-darkNav"
-                    : "bg-darkNav text-light"
+                  isDark ? "bg-lightBlue text-darkNav" : "bg-darkNav text-light"
                 } flex rounded-full max-w-fit p-1 my-2 mx-1`}
               >
                 <h1 className="px-1">{t}</h1>
               </div>
             ))}
           </div>
+          <div className="flex">
           <a
             className={`${
               !isDark
                 ? "bg-lightBlue border border-black text-darkNav"
                 : "bg-light border border-black text-darkNav"
             } my-3 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 rounded-md px-8 transition duration-200 hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[4px_4px_0px_0px_#000] active:translate-x-0 active:translate-y-0 active:!shadow-none dark:hover:shadow-[4px_4px_0px_0px_#fff] w-max`}
-            href="mailto:piyushg0707.03@gmail.com"
+            href={project.githubLink}
             target="_blank"
             rel="noopener noreferrer"
           >
             Github!
           </a>
+          {project.siteLink ? (
+            <a
+              className={`${
+                !isDark
+                  ? "bg-lightBlue border border-black text-darkNav"
+                  : "bg-light border border-black text-darkNav"
+              } my-3 mx-3 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 rounded-md px-8 transition duration-200 hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[4px_4px_0px_0px_#000] active:translate-x-0 active:translate-y-0 active:!shadow-none dark:hover:shadow-[4px_4px_0px_0px_#fff] w-max`}
+              href={project.siteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Site!
+            </a>
+          ) : null}
+          </div>
         </div>
 
         <img
